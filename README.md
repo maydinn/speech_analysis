@@ -81,7 +81,8 @@ Some insights:
     6.1) The prediction for the whole speech is really impressive, but it is reduced for sentences. 
     6.2) For the whole speech, the logistic regression worked very well, it predicted without any failure
     6.3) For the sentence level, several models  are applied, but overfitting and performance were major problems
-    6.4) So that, the logistic regression predicted also better than other models for sentence prediction. as well. 
+    6.4) So that, the logistic regression predicted also better than other models for sentence prediction. as well.
+7) Since there is a probability ratio for each label, it might give some insights about their relations as well. Results are quality similar for sentences and whole speeches dataframes. they indicate that there is a strong negative relationship between speeches of Erdogan and Bahceli while it is negative less weak for Kilicdaroglu. Euclidean Distance also shows that the distance between speeches of Erdogan and Bahceli is higher than ones between Erdogan and Kilicdaroglu, and Bahcel and Kilicdaroglu. Since Kilicdaroglu and Bahceli are opposition politicians, the higher similarity is reasonable. Moreover, having fewer observers for Kilicdaroglu can be also a reason to get a more similarity ratio for him. 
 
 Limitation & Further:
 1) Some models were not applied because of the limitation of my pc
