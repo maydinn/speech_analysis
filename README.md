@@ -39,27 +39,27 @@ for i in range(1, 23):
 
 #to click each speech by using a dynamic xpath
 
-for j in range(1,len(elements)+1):
-    path = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr['+str(j)+']/td[2]/a'
-    click = WebDriverWait(driver, 30).until(
-    C.presence_of_element_located((By.XPATH, path))
-    )
-    click.click()
+    for j in range(1,len(elements)+1):
+        path = '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr['+str(j)+']/td[2]/a'
+        click = WebDriverWait(driver, 30).until(
+        C.presence_of_element_located((By.XPATH, path))
+        )
+        click.click()
 
 #an easy way to visualize bar plot
 
-result.label.value_counts().plot(kind='bar')
+    result.label.value_counts().plot(kind='bar')
 
 #getting all sentences as list
-ki=[]
-for i in df_k.parag:
-    a = i.split('.')
-    for j in a[4:]:
-        ki.append(j)
+    ki=[]
+    for i in df_k.parag:
+        a = i.split('.')
+        for j in a[4:]:
+            ki.append(j)
 #making label list for sentences
-label_k = ('kilicdaroglu '*len(ki)).split()
+    label_k = ('kilicdaroglu '*len(ki)).split()
 #making dataframe by using zips
-df_k_s=pd.DataFrame(zip(ki, label_k),columns=['sentece','label'])
+    df_k_s=pd.DataFrame(zip(ki, label_k),columns=['sentece','label'])
 
 Some insights:
 
